@@ -22,7 +22,8 @@ node {
       def resourceGroup = 'devops'
       def webAppName = 'Saibobbala'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: 'jenkins-azure', passwordVariable: 'Lxe8Q~uwONB_qR3l1iM7~UzGh~ZhauknNul26c2a', usernameVariable: 'b17a2419-eb07-4632-a495-e85cb5f09170')]) {
+      //withCredentials([usernamePassword(credentialsId: 'jenkins-azure', passwordVariable: 'Lxe8Q~uwONB_qR3l1iM7~UzGh~ZhauknNul26c2a', usernameVariable: 'b17a2419-eb07-4632-a495-e85cb5f09170')]) {
+      withCredentials([usernamePassword(credentialsId: 'jenkins-azure', passwordVariable: 'rK.8Q~sibBfgZOanzoCEyrIfCHt0LcM9LpWDOdBX', usernameVariable: 'b17a2419-eb07-4632-a495-e85cb5f09170')]) {
        sh '''
           az login --service-principal -u b17a2419-eb07-4632-a495-e85cb5f09170 -p rK.8Q~sibBfgZOanzoCEyrIfCHt0LcM9LpWDOdBX -t 3e37509a-33ca-4c08-aa44-72f960edfb76
 
