@@ -25,7 +25,7 @@ node {
       //withCredentials([usernamePassword(credentialsId: 'jenkins-azure', passwordVariable: 'Lxe8Q~uwONB_qR3l1iM7~UzGh~ZhauknNul26c2a', usernameVariable: 'b17a2419-eb07-4632-a495-e85cb5f09170')]) {
       withCredentials([usernamePassword(credentialsId: 'jenkins-azure', passwordVariable: 'rK.8Q~sibBfgZOanzoCEyrIfCHt0LcM9LpWDOdBX', usernameVariable: 'b17a2419-eb07-4632-a495-e85cb5f09170')]) {
        sh '''
-          az login --service-principal -u b17a2419-eb07-4632-a495-e85cb5f09170 -p rK.8Q~sibBfgZOanzoCEyrIfCHt0LcM9LpWDOdBX -t 3e37509a-33ca-4c08-aa44-72f960edfb76
+          az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
 
           az account set -s $AZURE_SUBSCRIPTION_ID
         '''
