@@ -19,8 +19,8 @@ node {
     }
   
     stage('deploy') {
-      def resourceGroup = 'devops'
-      def webAppName = 'Saibobbala'
+      def resourceGroup = 'workshop-Azure_group'
+      def webAppName = 'sai-app1'
       // login Azure
       //withCredentials([usernamePassword(credentialsId: 'jenkins-azure', passwordVariable: 'Lxe8Q~uwONB_qR3l1iM7~UzGh~ZhauknNul26c2a', usernameVariable: 'b17a2419-eb07-4632-a495-e85cb5f09170')]) {
       withCredentials([usernamePassword(credentialsId: 'jenkins-azure', passwordVariable: 'rK.8Q~sibBfgZOanzoCEyrIfCHt0LcM9LpWDOdBX', usernameVariable: 'b17a2419-eb07-4632-a495-e85cb5f09170')]) {
